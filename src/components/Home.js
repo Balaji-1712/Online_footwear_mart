@@ -53,7 +53,7 @@ function Home() {
     return (
         <div className="container-fluid">
             <div className="text-center text-white p-3 bg-black">
-                <h1 style={{ fontFamily: 'ROBOT' }}>BALAJI SHOE MART</h1>
+                <h1 style={{ fontFamily: 'ROBOT' }}><i class="bi bi-shop"></i> BALAJI SHOE MART</h1>
             </div>
             <br />
             <div className="card text-center">
