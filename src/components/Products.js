@@ -109,7 +109,7 @@ function Products() {
                     <div className="col" key={index}>
                         <div className="card h-100 border border-3 border-dark text-center">
                             <div className='text-center my-5'>
-                                <img src={card.image} className="" style={{ width: '7cm', height: '7cm' }} alt="" />
+                                <img src={card.image} className="img-fluid" style={{ width: '7cm', height: '7cm' }} alt="" />
                             </div>
                             <div className="card-body">
                                 <h3 className="card-title pb-4">{card.title}</h3>
