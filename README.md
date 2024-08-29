@@ -1,3 +1,9 @@
+You can view the website by clicking the link below:
+
+https://online-footwear-mart.vercel.app/
+
+The Project is in progress and not completed yet
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
