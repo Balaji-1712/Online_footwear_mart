@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Footercommon from '../components/Footercommon';
 import Headercommon1 from '../components/Headercommon1';
+import { ToastContainer, toast } from 'react-toastify';
 
 function Products() {
     const [searchQuery, setSearchQuery] = useState('');
@@ -71,7 +72,6 @@ function Products() {
         setFilteredCards(cards);
     };
 
-    // Filter cards based on search query
     const displayedCards = filteredCards.filter((card) =>
         card.title.toLowerCase().includes(searchQuery)
     );
@@ -98,7 +98,17 @@ function Products() {
         if (confirm) {
             const existingCartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
             localStorage.setItem('cartItems', JSON.stringify([...existingCartItems, selectedItem]));
-            alert(`${selectedItem.title}, ${selectedItem.model} added to cart successfully!`);
+            toast.success(`${selectedItem.title}, ${selectedItem.model} added to cart!`, {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            style: { fontSize: "1.2rem", padding: "16px" }
+        });
         }
         setSelectedItem(null);
     };
@@ -318,7 +328,6 @@ function Products() {
                 </div>
             </div>
 
-            {/* Confirmation modal */}
             {selectedItem && (
                 <div className="modal show" tabIndex="-1" style={{ display: 'block' }}>
                     <div className="modal-dialog">
@@ -332,12 +341,14 @@ function Products() {
                             </div>
                             <div className="modal-footer">
                                 <button type="button" className="btn btn-primary" onClick={() => handleConfirmation(true)}>Yes</button>
+                                
                                 <button type="button" className="btn btn-secondary" onClick={() => handleConfirmation(false)}>No</button>
                             </div>
                         </div>
                     </div>
                 </div>
             )}
+            <ToastContainer />
             <Footercommon/>
         </div>
     );

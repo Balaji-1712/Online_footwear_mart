@@ -14,16 +14,16 @@ const Headercommon = ({ onSearchChange }) => {
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item"><NavLink to="/Products" className={linkClass}>PRODUCTS</NavLink></li>
-              <li className="nav-item"><NavLink to="/About" className={linkClass}>ABOUT</NavLink></li>
-              <li className="nav-item"><NavLink to="/Contact" className={linkClass}>CONTACT</NavLink></li>
+              <li className="nav-item"><NavLink to="/products" className={linkClass}>PRODUCTS</NavLink></li>
+              <li className="nav-item"><NavLink to="/about" className={linkClass}>ABOUT</NavLink></li>
+              <li className="nav-item"><NavLink to="/contact" className={linkClass}>CONTACT</NavLink></li>
             </ul>
             <form className="d-flex me-3">
               <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={onSearchChange} />
             </form>
             <ul className="navbar-nav">
-              <li className="nav-item"><NavLink to="/Profile" className={linkClass}><i className="bi bi-person-circle"></i> PROFILE</NavLink></li>
-              <li className="nav-item ms-2"><NavLink to="/Cart" className={linkClass}><i className="bi bi-cart"></i> CART</NavLink></li>
+              <li className="nav-item"><NavLink to="/profile" className={linkClass}><i className="bi bi-person-circle"></i> PROFILE</NavLink></li>
+              <li className="nav-item ms-2"><NavLink to="/cart" className={linkClass}><i className="bi bi-cart"></i> CART</NavLink></li>
             </ul>
           </div>
         </div>

@@ -11,13 +11,13 @@ function Headercommon2() {
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item"><a className="nav-link text-dark fw-bold" href="/Products">PRODUCTS</a></li>
-              <li className="nav-item"><a className="nav-link text-dark fw-bold" href="/About">ABOUT</a></li>
-              <li className="nav-item"><a className="nav-link text-dark fw-bold" href="/Contact">CONTACT</a></li>
+              <li className="nav-item"><a className="nav-link text-dark fw-bold" href="/products">PRODUCTS</a></li>
+              <li className="nav-item"><a className="nav-link text-dark fw-bold" href="/about">ABOUT</a></li>
+              <li className="nav-item"><a className="nav-link text-dark fw-bold" href="/contact">CONTACT</a></li>
             </ul>
             <ul className="navbar-nav">
-              <li className="nav-item"><a className="nav-link text-dark fw-bold" href="/Profile"><i className="bi bi-person-circle"></i> PROFILE</a></li>
-              <li className="nav-item ms-2"><a className="nav-link text-dark fw-bold" href="/Cart"><i className="bi bi-cart"></i> CART</a></li>
+              <li className="nav-item"><a className="nav-link text-dark fw-bold" href="/profile"><i className="bi bi-person-circle"></i> PROFILE</a></li>
+              <li className="nav-item ms-2"><a className="nav-link text-dark fw-bold" href="/cart"><i className="bi bi-cart"></i> CART</a></li>
             </ul>
           </div>
         </div>
