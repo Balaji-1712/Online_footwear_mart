@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import Footercommon from '../components/Footercommon';
+import Headercommon1 from '../components/Headercommon1';
 
 function Products() {
     const [searchQuery, setSearchQuery] = useState('');
@@ -139,37 +141,7 @@ function Products() {
                 <h1 style={{ fontFamily: 'ROBOT' }}>BALAJI SHOE MART</h1>
             </div>
             <br />
-            <div className="card text-center">
-                <div className="card-header">
-                    <ul className="nav nav-tabs card-header-tabs bg-primary">
-                        <li className="nav-item"><a className="nav-link text-dark fw-bold" aria-current="true" href="/">HOME</a></li>
-                        <li className="nav-item"><a className="nav-link text-dark fw-bold active" href="/Products">PRODUCTS</a></li>
-                        <li className="nav-item"><a className="nav-link text-dark fw-bold" href="/About">ABOUT</a></li>
-                        <li className="nav-item"><a className="nav-link text-dark fw-bold" href="/Contact">CONTACT</a></li>
-                        <div className="d-flex me-3 justify-content-center align-items-center my-1">
-                            <div className="input-group">
-                                <span className="input-group-text" id="basic-addon1">
-                                    <i className="bi bi-search"></i>
-                                </span>
-                                <input
-                                    type="text"
-                                    className="form-control"
-                                    placeholder="Search Your Products"
-                                    aria-label="Search"
-                                    aria-describedby="basic-addon1"
-                                    value={searchQuery}
-                                    onChange={handleSearchChange}
-                                />
-                            </div>
-                        </div>
-                         <li class="nav-item"><a class="nav-link text-dark fw-bold" href="/Profile"><i class="bi bi-person-circle"></i> PROFILE</a></li>
-                         <li class="nav-item ms-2"><a class="nav-link text-dark fw-bold" href="/Cart"><i class="bi bi-cart"></i> CART</a></li>
-                    </ul>
-                </div>
-                <div className="card-body">
-                    <h5 className="card-title">Our Best Products</h5>
-                </div>
-            </div>
+            <Headercommon1 onSearchChange={handleSearchChange} />
 
             <div className="row">
                 <div className="col-md-3">
@@ -366,6 +338,7 @@ function Products() {
                     </div>
                 </div>
             )}
+            <Footercommon/>
         </div>
     );
 }

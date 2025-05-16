@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import Footercommon from '../components/Footercommon';
+import Headercommon1 from '../components/Headercommon1';
 
 function Home() {
     
@@ -57,30 +59,7 @@ function Home() {
             </div>
             <br />
             <div className="card text-center">
-                <div className="card-header">
-                    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-                    <div class="container-fluid">
-                        <a class="navbar-brand text-dark fw-bold active" href="/">HOME</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item"><a class="nav-link text-dark fw-bold" href="/Products">PRODUCTS</a></li>
-                                <li class="nav-item"><a class="nav-link text-dark fw-bold" href="/About">ABOUT</a></li>
-                                <li class="nav-item"><a class="nav-link text-dark fw-bold" href="/Contact">CONTACT</a></li>
-                            </ul>
-                            <form class="d-flex me-3">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={handleSearchChange}></input>
-                            </form>
-                            <ul class="navbar-nav">
-                                <li class="nav-item"><a class="nav-link text-dark fw-bold" href="/Profile"><i class="bi bi-person-circle"></i> PROFILE</a></li>
-                                <li class="nav-item ms-2"><a class="nav-link text-dark fw-bold" href="/Cart"><i class="bi bi-cart"></i> CART</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    </nav>
-                </div>
+                <Headercommon1 onSearchChange={handleSearchChange} />
                 <div className="card-body">
                     <div className="carousel slide mx-auto bg-warning border border-3 border-dark" style={{ width: '100%', height: '55vh' }} data-bs-ride="carousel" id="c1">
                         <div className="carousel-indicators">
@@ -161,39 +140,7 @@ function Home() {
                     </div>
                 </div>
             )}
-           
-            <footer className="bg-dark text-white mt-5">
-                <div className="container py-4">
-                    <div className="row">
-                        <div className="col-md-4">
-                            <h5>About Us</h5>
-                            <p>We are a leading company in our industry, committed to providing quality products and exceptional service.</p>
-                        </div>
-                        <div className="col-md-4">
-                            <h5>Quick Links</h5>
-                            <ul className="list-unstyled">
-                                <li><a href="/" className="text-white">Home</a></li>
-                                <li><a href="/About" className="text-white">About</a></li>
-                                <li><a href="/Contact" className="text-white">Contact</a></li>
-                            </ul>
-                        </div>
-                        <div className="col-md-4">
-                            <h5>Contact Us</h5>
-                            <address>
-                                Balaji Shoe Mart, Mettur, Salem - 636402, <br />
-                                TamilNadu<br />
-                                Email:{' '}
-                                <a href="mailto:balajikamaraj01@gmail.com" className="text-white">info@example.com</a>
-                            </address>
-                        </div>
-                    </div>
-                    <hr className="my-4" />
-                    <div className="text-center">
-                        <p className="mb-0">&copy; 2024 Balaji Shoe Mart. All rights reserved.</p>
-                        <small>Comfort and Quality</small>
-                    </div>
-                </div>
-            </footer>
+            <Footercommon/>
         </div>
     );
 }

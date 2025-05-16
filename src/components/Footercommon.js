@@ -1,28 +1,9 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
-function Contact()
+import React from 'react';
+
+function Footercommon()
 {
     return(
-        <div className="container-fluid">
-            <div className="text-center text-white p-3 bg-black">
-                <h1 style={{ fontFamily: 'ROBOT' }}>BALAJI SHOE MART</h1>
-            </div>
-            <br />
-            <div className="card text-center">
-                <div className="card-header">
-                    <ul className="nav nav-tabs card-header-tabs bg-primary">
-                        <li className="nav-item"><a className="nav-link text-dark fw-bold" aria-current="true" href="/">HOME</a></li>
-                        <li className="nav-item"><a className="nav-link text-dark fw-bold" href="/Products">PRODUCTS</a></li>
-                        <li className="nav-item"><a className="nav-link text-dark fw-bold" href="/About">ABOUT</a></li>
-                        <li className="nav-item"><a className="nav-link text-dark fw-bold active" href="/Contact">CONTACT</a></li>
-                        <li className="nav-item ms-auto d-flex align-items-center">
-                            <a className="nav-link text-dark fw-bold" href="/Profile"><i className="bi bi-person-circle"></i>PROFILE</a>
-                            <a className="nav-link text-dark fw-bold ms-2" href="/Cart"><i className="bi bi-cart"></i> CART</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <footer className="bg-dark text-white mt-5">
+        <footer className="bg-dark text-white mt-5">
                 <div className="container py-4">
                     <div className="row">
                         <div className="col-md-4">
@@ -54,7 +35,7 @@ function Contact()
                     </div>
                 </div>
             </footer>
-        </div>
-    );
+    )
 }
-export default Contact;
+
+export default Footercommon;
