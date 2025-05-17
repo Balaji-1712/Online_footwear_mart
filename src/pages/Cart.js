@@ -33,7 +33,7 @@ function Cart() {
             theme: "colored",
             style: { fontSize: "1.2rem", padding: "16px" }
         });
-        setItemToRemoveIndex(null); // Close modal
+        setItemToRemoveIndex(null);
     };
 
     const handleCancelRemove = () => {
