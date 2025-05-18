@@ -1,9 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
+import { useState, useEffect } from 'react';
 import Footercommon from '../components/Footercommon';
-import Headercommon2 from '../components/Headercommon2';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 function Cart() {
     const [cartItems, setCartItems] = useState([]);
@@ -33,7 +30,9 @@ function Cart() {
             theme: "colored",
             style: { fontSize: "1.2rem", padding: "16px" }
         });
-        setItemToRemoveIndex(null);
+        setTimeout(() => {
+            setItemToRemoveIndex(null);
+        }, 100);
     };
 
     const handleCancelRemove = () => {
@@ -42,11 +41,6 @@ function Cart() {
 
     return (
         <div className="container-fluid">
-            <div className="text-center text-white p-3 bg-black">
-                <h1 style={{ fontFamily: 'ROBOT' }}>BALAJI SHOE MART</h1>
-            </div>
-            <br />
-            <Headercommon2 />
             <div className="container mt-5">
                 <h2 className="mb-4">Shopping Cart</h2>
                 {cartItems.length === 0 ? (
@@ -102,8 +96,6 @@ function Cart() {
                     </div>
                 </div>
             )}
-
-            <ToastContainer />
             <Footercommon />
         </div>
     );
